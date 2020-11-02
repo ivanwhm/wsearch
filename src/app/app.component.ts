@@ -11,7 +11,8 @@ export class AppComponent {
   constructor(private service: WikipediaService) {}
 
   onTerm(term: string): void {
-    const results = this.service.search(term);
-    console.log(results);
+    this.service.search(term).subscribe((response: any) => {
+      console.log(response);
+    });
   }
 }

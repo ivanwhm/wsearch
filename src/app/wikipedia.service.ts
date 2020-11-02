@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const WIKIPEDIA_URL = 'https://en.wikipedia.org/w/api.php';
+const WIKIPEDIA_URL = 'https://pt.wikipedia.org/w/api.php';
 
 @Injectable({
   providedIn: 'root',

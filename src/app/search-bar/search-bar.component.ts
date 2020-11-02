@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SearchBarComponent {
   term = '';
+
+  onFormSubmit(event: any): void {
+    event.preventDefault();
+    console.log(this.term);
+  }
 }

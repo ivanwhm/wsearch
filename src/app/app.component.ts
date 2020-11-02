@@ -8,11 +8,13 @@ import { WikipediaService } from './wikipedia.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  searchData = [];
+
   constructor(private service: WikipediaService) {}
 
   onTerm(term: string): void {
     this.service.search(term).subscribe((response: any) => {
-      console.log(response);
+      this.searchData = response.query.search;
     });
   }
 }

@@ -13,8 +13,8 @@ export class AppComponent {
   constructor(private service: WikipediaService) {}
 
   onTerm(term: string): void {
-    this.service.search(term).subscribe((response: any) => {
-      this.searchData = response.query.search;
+    this.service.search(term).subscribe((response: any[]) => {
+      this.searchData = response;
     });
   }
 }
